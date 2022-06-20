@@ -7,13 +7,16 @@ public class thirdlargestarray {
 		int temp;
 		for(int i=0;i<total;i++)
 		{
-			for(int j=1+1;j<total;j++)
+			for(int j=i+1;j<total;j++)
 			{
+				              if (arr[i] > arr[j])
+				              {
 				temp=arr[i];
 				arr[i]=arr[j];
 				arr[j]=temp;
 				
 			}
+		}
 		}
 		
 		return arr[total-3];
